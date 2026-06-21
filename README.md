@@ -5,7 +5,8 @@ The community I chose was r/csmajors, which I chose because I frequent it a lot 
 ## Labels
 
 - `help`: a post asking for guidance on a decision that they will need to make
-  **TITLE**: Should I limit myself to a degree for OA/Interview questions to show underlying foundation?
+  
+**TITLE**: Should I limit myself to a degree for OA/Interview questions to show underlying foundation?
 
 ```
 So I've been newly working on leet code as a rising college Junior. I recognize I'm behind but I'm putting in the work now. My dad is a software engineer and according to him I should avoid some of the tools available to me such as hash maps etc for these technical interviews. I'm confused about the legitimacy behind this and it also makes me question where I should draw the line if it is the case.
