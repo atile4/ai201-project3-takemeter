@@ -128,6 +128,10 @@ https://www.reddit.com/r/csMajors/comments/1u85a4o/i_give_up_software_was_my_big
 
 I collected the data from the r/CSMajors subreddit. I read through each post, labeled it as `help`, `question`, or `rant`, and pasted in the title and body of the post under the `text` column in a Google Sheet. I also included the link and other potential labels as extra columns.
 
+## Fine Tuning Approach
+The model was fine-tuned using the default notebook settings: 3 epochs, learning rate 2e-5, and batch size 16. I kept the default learning rate of 2e-5 as it is a standard conservative choice for fine-tuning pre-trained transformers, reducing the risk of overwriting the pretrained weights too aggressively on a small dataset of 140 training examples.
+
+
 ## Label Distribution
 
 Label distribution:
@@ -270,6 +274,22 @@ Fine-tuned DistilBERT 0.500
 
 Fine-tuning regression: 0.400
 ```
+
+### Per-Class Metrics
+
+| | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| **Baseline (Groq llama-3.3-70b-versatile)** | | | | |
+| help | 0.87 | 1.00 | 0.93 | 13 |
+| question | 1.00 | 0.62 | 0.77 | 8 |
+| rant | 0.90 | 1.00 | 0.95 | 9 |
+| **macro avg** | 0.92 | 0.88 | 0.88 | 30 |
+| | | | | |
+| **Fine-tuned DistilBERT** | | | | |
+| help | 0.46 | 0.85 | 0.59 | 13 |
+| question | 0.00 | 0.00 | 0.00 | 8 |
+| rant | 0.67 | 0.44 | 0.53 | 9 |
+| **macro avg** | 0.38 | 0.43 | 0.38 | 30 |
 
 ## Fine-Tuned Model — Confusion Matrix (Test Set)
 
