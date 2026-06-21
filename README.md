@@ -142,6 +142,7 @@ question 50
 
 ## Difficult-to-label Examples
 
+```
 If you think SWE is a dead end field, why are you here?
 TLDR: If you genuinely believe SWE is dead, why are you still in a cs related sub?
 
@@ -154,9 +155,11 @@ The worst part? These people never ask for resume reviews or constructive critic
 almost every CS sub has become a doomer cesspool with every top post being about some company that laid off people or how AI has ruined the industry. Any signals of positive change, like jobs are being posted more or unemployment is going down, is met with "fake news". convenient.
 
 As I said I'm right there too. but I thought about what I could do to improve my situation. I have no internships so I reached out to local non-profits to help build their website. I am working on small projects to help grow my skillset, especially because I'm no longer in college. In many ways I'm not too different by making a venting post about those who vent. I guess I just wish this and most of the CS subs were more than just constant AI Doomer takes for the last 3-4 years. I support venting when your aiming for a goal or specific change, not when your end game is pointless and all you shout is "SWE is dead" without any direction or meaning or purpose. I see one as purpose driven and the other as childish wining with not goal in mind. Your life won't change if you don't do anything to change it.
+```
 
 **Final Label Choice: `question`**
 
+```
 Lost in life and don’t know what to do.
 My story is very long but those that can provide genuine help or advice, I’d be thankful to them.
 
@@ -174,6 +177,8 @@ The university for my CS won’t be good so I’ll probably be learning stuff on
 Question about vibe coding and AI for high school ECs
 
 I’m a rising junior in high school and looking to major in CS. So far I’m working on personal coding projects but I’m kinda doubting myself with the rise of AI and vibe coding like what’s the point of manually programming everything myself when you can use AI. I don’t even know how valued coding is now. But I still want to put effort in my work. So I’m essentially asking like should I stick to manually programming everything, and what are some other ECs I can do, and how can I show colleges that I can work with and utilize evolving technology?
+```
+
 **Final Label Choice: `help`**
 
 ## Fine-tuning approach:
