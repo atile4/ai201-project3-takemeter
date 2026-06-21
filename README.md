@@ -255,7 +255,7 @@ rant
 The baseline used Groq's llama-3.3-70b-versatile model with a zero-shot prompt containing the three label definitions and one example post per label drawn from the training data. The prompt instructed the model to respond with only the label name and no explanation. Each post in the test set was sent as a separate user message with the system prompt attached, and the model's response was parsed directly as the predicted label. All 30 test examples returned parseable responses.
 
 ## Evaluation Report
-
+```
 ==================================================
 RESULTS COMPARISON
 ==================================================
@@ -269,6 +269,7 @@ Fine-tuned DistilBERT 0.500
 ---
 
 Fine-tuning regression: 0.400
+```
 
 ## Fine-Tuned Model — Confusion Matrix (Test Set)
 
@@ -311,7 +312,19 @@ The post is also structured as an argument rather than a pure vent, in the way t
 
 This points to a real boundary issue: posts that vent but implicitly ask "do you agree?" sit uncomfortably between `rant` and `help`, which wasn't a part of my considerations when labeling, and if similar posts were labeled inconsistently during annotation, the model would have had contradictory signal to learn from.
 
-#### Sample Classifications
+## Sample Classifications
+
+| Post (truncated) | True Label | Predicted | Confidence |
+|---|---|---|---|
+| "Has AI had a positive or negative impact on Tech careers?" | question | help | 37.49% |
+| "NVIDIA interview scheduling delay after recruiter said team wants to move forward — normal?" | help | help ✓ | 37.53% |
+| "Why don't more CS students just switch to traditional engineering?" | question | help | 38.42% |
+| "At an internship I've been loving, but got an Amazon Interview Internship Question" | help | help ✓ | 37.33% |
+| "Why is CS talked about the most for be replaced when it's seems safer than most white collar jobs?" | question | help | 35.80% |
+
+The NVIDIA post is correctly predicted as `help` — the poster is describing a specific situation happening to them and asking whether it is normal, which fits the definition of seeking advice directly related to themselves.
+
+Notably, all five confidence scores cluster between 35–38%, barely above the 33% random chance threshold for a 3-class problem. This low confidence across the board reflects the model's difficulty distinguishing `help` from `question`, and is consistent with the 0.00 F1 score for `question` seen in the full evaluation.
 
 ## Reflection
 
